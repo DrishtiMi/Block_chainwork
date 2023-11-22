@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "blockchainwork_backend": {
+      "main": "src/blockchainwork_backend/main.mo",
+      "type": "motoko"
+    },
+    "blockchainwork_frontend": {
+      "dependencies": [
+        "blockchainwork_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/blockchainwork_frontend/src/index.html"
+      },
+      "source": [
+        "src/blockchainwork_frontend/assets",
+        "dist/blockchainwork_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
